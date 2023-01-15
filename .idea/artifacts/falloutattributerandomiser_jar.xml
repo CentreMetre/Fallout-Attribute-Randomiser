@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="falloutattributerandomiser:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/falloutattributerandomiser_jar</output-path>
+    <root id="archive" name="falloutattributerandomiser.jar">
+      <element id="module-output" name="falloutattributerandomiser" />
+    </root>
+  </artifact>
+</component>
