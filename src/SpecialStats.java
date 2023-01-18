@@ -14,4 +14,6 @@ public class SpecialStats {
     during character creation,for a total of 40 points.*/
 
     /*weight could be where the middle stays five, or choose a weight between 1 and 9*/
+
+
 }
