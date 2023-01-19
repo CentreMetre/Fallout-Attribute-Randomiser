@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.Scanner;
 import java.util.Random;
 /**
@@ -15,23 +16,32 @@ public class Main {
      * @since init
      */
 
-    Player player = new Player();
+    static Player player = new Player();
+    User user = new User();
     static Random random = new Random();
-
+    static Scanner menuChoice = new Scanner(System.in);
     public static void main(String[] args)
     {
-        System.out.println("1. Create new random stats");
+
+
+        System.out.println("1. Generate new random stats");
         System.out.println("2. Settings");
         System.out.println("0. Exit programme");
 
         mainMenuInput();
     }
 
+    public static void initialise()
+    {
+        User user = new User();
+
+    }
+
     public static void mainMenuInput()
     {
-        Scanner input = new Scanner(System.in);
 
-        String mainMenu = input.nextLine();
+
+        String mainMenu = menuChoice.nextLine();
         int choice = Validate.numberRange(mainMenu,0,9);
 
         switch (choice)
@@ -45,6 +55,7 @@ public class Main {
                 break;
             case 9:
                 test();
+                main(null);
                 break;
             case -1:
                 mainMenuInput();
@@ -55,11 +66,17 @@ public class Main {
 
     public static void test()
     {
-        for(int i = 0; i < 5; i++)
-        {
-            System.out.println(random.nextInt(0,5));
+//        for(int i = 0; i < 5; i++)
+//        {
+//            System.out.println(random.nextInt(0,5));
+//
+//        }
 
-        }
+//        String os = System.getProperty("os.name");
+//        System.out.println("Your os is: " + os);
+
+
+
     }
 
     public static void generateNewStatsScript()
@@ -69,7 +86,24 @@ public class Main {
 
     public static void aquireGame()
     {
+        System.out.println("What game are you playing?");
+        System.out.println("1. Fallout 3");
+        System.out.println("2. Fallout: New Vegas");
+        System.out.println("3. Fallout 4");
 
+        String input = menuChoice.nextLine();
+
+        int choice = Validate.numberRange(input,1,3);
+
+        switch (choice)
+        {
+            case 1:
+                player.setGame(FalloutEnum.FALLOUT3);
+                break;
+            case 2:
+                player.setGame(FalloutEnum.FALLOUTNV);
+                break;
+        }
     }
 
     public static void getConditions()
@@ -77,9 +111,9 @@ public class Main {
 
     }
 
-    public static void generateRandomNumbers()
+    public void generateRandomNumbers()
     {
-        player.setMaxPoints([5] = 5);
+        //player.setMaxPoints();
 
     }
 }
