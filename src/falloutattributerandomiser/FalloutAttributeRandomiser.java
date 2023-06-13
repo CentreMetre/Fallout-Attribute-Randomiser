@@ -1,5 +1,7 @@
 package falloutattributerandomiser;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Martin McLaren
@@ -7,12 +9,16 @@ package falloutattributerandomiser;
 public class FalloutAttributeRandomiser
 {
 
+    Player player;
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args)
     {
-        // TODO code application logic here
+        
     }
+    
+    //private static void 
     
 }
