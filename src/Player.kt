@@ -1,7 +1,10 @@
+import kotlin.random.Random
+
 class Player {
 
-    var Attributes = SPECIAL()
 
-
+    
 }
+
+
 
