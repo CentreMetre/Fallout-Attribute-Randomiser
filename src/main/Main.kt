@@ -1,3 +1,5 @@
+package main
+
 import kotlin.random.Random
 
 val Attributes = Array<Int>(7) {0}
