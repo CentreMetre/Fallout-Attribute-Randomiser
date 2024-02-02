@@ -12,8 +12,7 @@
     <list default="true" id="464fda8b-c8f6-43b2-8b4a-26b43fe94100" name="Changes" comment="Implemented toString() and a test for it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/SPECIAL.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Special.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/SPECIALTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SpecialTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Player.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +57,7 @@
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.SPECIALTest.executor": "Run",
     "JUnit.SPECIALTest.testToString.executor": "Run",
+    "JUnit.SpecialTest.executor": "Run",
     "JUnit.SpecialTest.testRandomiseAttributesFallout3.executor": "Run",
     "JUnit.SpecialTest.testRandomiseAttributesFallout4.executor": "Run",
     "JUnit.SpecialTest.testRandomiseAttributesFalloutNV.executor": "Run",
@@ -103,7 +103,22 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SpecialTest.testRandomiseAttributesFallout4">
+  <component name="RunManager" selected="Kotlin.MainKt">
+    <configuration name="SpecialTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FalloutRandomiser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SpecialTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpecialTest.testRandomiseAttributesFallout3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FalloutRandomiser" />
       <extension name="coverage">
@@ -152,22 +167,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpecialTest.testSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FalloutRandomiser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.SpecialTest" />
-      <option name="METHOD_NAME" value="testSum" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.MainKt" />
       <module name="FalloutRandomiser" />
@@ -193,11 +192,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.SpecialTest" />
         <item itemvalue="JUnit.SpecialTest.testRandomiseAttributesFallout4" />
         <item itemvalue="JUnit.SpecialTest.testRandomiseAttributesFalloutNV" />
         <item itemvalue="JUnit.SpecialTest.testRandomiseAttributesFallout3" />
-        <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="JUnit.SpecialTest.testSum" />
       </list>
     </recent_temporary>
   </component>
@@ -284,7 +283,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/Special.kt</url>
-          <line>40</line>
+          <line>41</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
