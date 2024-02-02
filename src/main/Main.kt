@@ -3,13 +3,17 @@ package main
 val Attributes = Array<Int>(7) {0}
 fun main() {
 
-    var testSample = SPECIAL(1)
-    println(testSample.toString())
-    testSample[0] = 5
-    testSample[1] = 3
-    println(testSample[0])
+    var fallout3 = Special(1)
 
-    println(testSample[1])
+    fallout3[0] = 5
+    fallout3[1] = 5
+    fallout3[2] = 5
 
-    println(testSample.toString())
+    var total = fallout3.sum()
+
+    print(fallout3)
+
+    println(total)
+
+    fallout3.randomiseAttributes()
 }

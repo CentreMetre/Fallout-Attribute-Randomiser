@@ -9,11 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="464fda8b-c8f6-43b2-8b4a-26b43fe94100" name="Changes" comment="Added testing dependencies">
+    <list default="true" id="464fda8b-c8f6-43b2-8b4a-26b43fe94100" name="Changes" comment="Implemented toString() and a test for it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/SPECIAL.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/SPECIAL.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/SPECIALTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SPECIALTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/SPECIAL.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Special.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SPECIALTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SpecialTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,11 @@
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.SPECIALTest.executor": "Run",
     "JUnit.SPECIALTest.testToString.executor": "Run",
-    "Kotlin.MainKt.executor": "Debug",
+    "JUnit.SpecialTest.testRandomiseAttributesFallout3.executor": "Run",
+    "JUnit.SpecialTest.testRandomiseAttributesFallout4.executor": "Run",
+    "JUnit.SpecialTest.testRandomiseAttributesFalloutNV.executor": "Run",
+    "JUnit.SpecialTest.testSum.executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -99,8 +103,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SPECIALTest.testToString">
-    <configuration name="SPECIALTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SpecialTest.testRandomiseAttributesFallout4">
+    <configuration name="SpecialTest.testRandomiseAttributesFallout3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FalloutRandomiser" />
       <extension name="coverage">
         <pattern>
@@ -109,13 +113,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.SPECIALTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="test.SpecialTest" />
+      <option name="METHOD_NAME" value="testRandomiseAttributesFallout3" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SPECIALTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpecialTest.testRandomiseAttributesFallout4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FalloutRandomiser" />
       <extension name="coverage">
         <pattern>
@@ -124,8 +129,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.SPECIALTest" />
-      <option name="METHOD_NAME" value="testToString" />
+      <option name="MAIN_CLASS_NAME" value="test.SpecialTest" />
+      <option name="METHOD_NAME" value="testRandomiseAttributesFallout4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpecialTest.testRandomiseAttributesFalloutNV" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FalloutRandomiser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SpecialTest" />
+      <option name="METHOD_NAME" value="testRandomiseAttributesFalloutNV" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpecialTest.testSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FalloutRandomiser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SpecialTest" />
+      <option name="METHOD_NAME" value="testSum" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,9 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SPECIALTest.testToString" />
+        <item itemvalue="JUnit.SpecialTest.testRandomiseAttributesFallout4" />
+        <item itemvalue="JUnit.SpecialTest.testRandomiseAttributesFalloutNV" />
+        <item itemvalue="JUnit.SpecialTest.testRandomiseAttributesFallout3" />
         <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="JUnit.SPECIALTest" />
+        <item itemvalue="JUnit.SpecialTest.testSum" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706885924826</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implemented toString() and a test for it">
+      <option name="closed" value="true" />
+      <created>1706888402850</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706888402850</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,15 +271,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added docu, added main and test folder and moved files into main" />
     <MESSAGE value="Added testing dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added testing dependencies" />
+    <MESSAGE value="Implemented toString() and a test for it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented toString() and a test for it" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/SPECIAL.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/Special.kt</url>
           <line>64</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/Special.kt</url>
+          <line>40</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

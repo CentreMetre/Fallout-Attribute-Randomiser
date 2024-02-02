@@ -6,7 +6,7 @@ import kotlin.random.Random
  * Acts like a List to store the attributes
  * @param game the id of Fallout the game as according to enum [Game]
  */
-class SPECIAL (private var game: Int)
+class Special (private var game: Int)
 {
     //Cant be null
     private var maxPoints : Int = 0
@@ -34,6 +34,16 @@ class SPECIAL (private var game: Int)
             Game.FalloutNewVegas.id -> maxPoints = Game.FalloutNewVegas.maxPoints
             Game.Fallout4.id -> maxPoints = Game.Fallout4.maxPoints
         }
+    }
+
+    fun sum() : Int
+    {
+        var total = 0
+        for (attribute in attributes.indices) //indices needed otherwise it will add x (e.g. 5) when i = 0
+        {
+            total = total + attributes[attribute]
+        }
+        return total
     }
 
     /**
@@ -85,13 +95,13 @@ class SPECIAL (private var game: Int)
     /**
      * Generates and sets the *unbalanced* numbers for [attributes]
      */
-    fun generateAndSetRandomAttributes()
+    private fun generateAndSetRandomAttributes()
     {
 
-        for (i in MIN_ATTRIBUTE_POINTS_COUNT..MAX_ATTRIBUTE_POINTS_COUNT)
+        for (i in 0 .. 6)
         {
             // +1 needed to make it inclusive so it can generate 10
-            attributes[i] = Random.nextInt(MIN_ATTRIBUTE_POINTS_COUNT, MAX_ATTRIBUTE_POINTS_COUNT + 1)
+            attributes[i] = Random.nextInt(MIN_ATTRIBUTE_POINTS_COUNT, MAX_ATTRIBUTE_POINTS_COUNT + 1) //+1 needed for inclusive
         }
 
 
