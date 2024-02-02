@@ -5,7 +5,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class SpecialTest {
-    private val testSample: Special = Special(0)
+    private val testSample: Special = Special(Game.Fallout3)
     @Test
     fun testToString() {
 
@@ -42,7 +42,7 @@ class SpecialTest {
      * Checks the final [Special.attributes] total against the chosen [Game]s [Special.maxPoints]
      */
     fun testRandomiseAttributesFallout3() {
-        var fallout3 = Special(0)
+        var fallout3 = Special(Game.Fallout3)
         fallout3.randomiseAttributes()
         var expected = true
         var actual = if (fallout3.sum() == Game.Fallout3.maxPoints) true else false
@@ -54,7 +54,7 @@ class SpecialTest {
      * Checks the final [Special.attributes] total against the chosen [Game]s [Special.maxPoints]
      */
     fun testRandomiseAttributesFalloutNV() {
-        var falloutNV = Special(1)
+        var falloutNV = Special(Game.FalloutNewVegas)
         falloutNV.randomiseAttributes()
         var expected = true
         var actual = if (falloutNV.sum() == Game.FalloutNewVegas.maxPoints) true else false
@@ -66,7 +66,7 @@ class SpecialTest {
      * Checks the final [Special.attributes] total against the chosen [Game]s [Special.maxPoints]
      */
     fun testRandomiseAttributesFallout4() {
-        var fallout4 = Special(2)
+        var fallout4 = Special(Game.Fallout4)
         fallout4.randomiseAttributes()
         var expected = true
         var actual = if (fallout4.sum() == Game.Fallout4.maxPoints) true else false

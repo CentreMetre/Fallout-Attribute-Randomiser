@@ -6,7 +6,7 @@ import kotlin.random.Random
  * Acts like a List to store the attributes
  * @param game the id of Fallout the game as according to enum [Game]
  */
-class Special (private var game: Int)
+class Special (private var game: Game)
 {
     //Cant be null
     private var maxPoints : Int = 0
@@ -28,12 +28,13 @@ class Special (private var game: Int)
 
     //Sets the max points
     init {
-        when (game)
-        {
-            Game.Fallout3.id -> maxPoints = Game.Fallout3.maxPoints
-            Game.FalloutNewVegas.id -> maxPoints = Game.FalloutNewVegas.maxPoints
-            Game.Fallout4.id -> maxPoints = Game.Fallout4.maxPoints
-        }
+        maxPoints = game.maxPoints
+//        when (game)
+//        {
+//            Game.Fallout3 -> maxPoints = Game.Fallout3.maxPoints
+//            Game.FalloutNewVegas -> maxPoints = Game.FalloutNewVegas.maxPoints
+//            Game.Fallout4 -> maxPoints = Game.Fallout4.maxPoints
+//        }
     }
 
     fun sum() : Int
