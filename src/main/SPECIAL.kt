@@ -62,7 +62,15 @@ class SPECIAL (private var game: Int)
      */
     override fun toString() : String
     {
-        return ""
+        var stringToReturn = ""
+
+        for (attributeIndex in attributes.indices) //need .indices for some reason
+        {
+            var attribute = attributes[attributeIndex]
+            var attributeName = attributesNames[attributeIndex]
+            stringToReturn = "$stringToReturn$attributeName: $attribute \n"
+        }
+        return stringToReturn
     }
 
     /**
